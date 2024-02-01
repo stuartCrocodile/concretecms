@@ -72,7 +72,7 @@ if (!isset($type)) {
                                name="<?= $col->getColumnKey() ?>"
                                id="<?= $col->getColumnKey() ?>"
                                value="1"
-                               <?php if ($current->contains($col)) { ?>checked<?php } ?>>
+                               <?php if (isset($current) && $current->contains($col)) { ?>checked<?php } ?>>
                         <label class="form-check-label"
                                for="<?= $col->getColumnKey() ?>"><?= $col->getColumnName() ?></label>
                     </div>
